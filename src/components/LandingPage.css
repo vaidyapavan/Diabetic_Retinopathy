@@ -1,32 +1,33 @@
-
 /* Global Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   height: 100%;
-  width: 100%;
 }
 
+/* Container Styles */
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh; /* Ensure full screen height */
+  max-width: 100%;
 }
 
 /* Navbar Styles */
 .navbar {
   background-color: #e8f3ff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Aligns logo on left and button on right */
   align-items: center;
-  padding: 10px 15px;
+  padding: 10px 20px; /* Adjusted padding for better spacing */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
   font-size: 24px;
   font-weight: bold;
+  text-align: left;
 }
 
 .nav-links {
@@ -34,15 +35,20 @@ body, html {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-grow: 1; /* Make navigation items take available space */
+  justify-content: center; /* Centers the navigation links */
 }
 
 .nav-links li {
   margin: 0 15px;
   cursor: pointer;
+  font-size: 16px;
+  color: #333;
 }
 
 .nav-links li:hover {
   text-decoration: underline;
+  color: #007bff;
 }
 
 .login-btn {
@@ -52,7 +58,8 @@ body, html {
   border-radius: 5px;
   padding: 8px 15px;
   cursor: pointer;
-  margin-right: 25px;
+  margin-left: 25px;
+  font-size: 16px;
 }
 
 .login-btn:hover {
@@ -62,41 +69,45 @@ body, html {
 /* Content Styles */
 .content {
   display: flex;
+  justify-content: space-around; /* Space sections side by side */
+  align-items: center;
   flex: 1;
-  height: calc(100vh - 60px); /* Full height minus navbar */
-  width: 100%; /* Full screen width */
-  justify-content: center; /* Centers the sections horizontally */
-  align-items: center; /* Centers the sections vertically */
-  gap: 0; /* Removes any spacing between sections */
   margin: 0;
   padding: 0;
+  height: calc(100vh - 80px); /* Adjusted height to fill remaining space */
 }
 
-/* Section styling: Adjusting layout for Hospitals and Patients */
+/* Section Styles */
 .section {
-  flex: 0 0 90%; /* Each section occupies 50% of the total width */
-  height: calc(100vh - 60px); /* Full viewport height minus navbar */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 45%; /* Each section will take 45% of available space */
+  max-width: 500px; /* Max width to prevent stretching */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hospital {
-  background-color: #e8f3ff; /* Light blue for hospitals */
+  background-color: #e8f3ff;
 }
 
 .patient {
-  background-color: #f7f7f7; /* Light gray for patients */
+  background-color: #f7f7f7;
 }
 
 .section h2 {
   color: #007bff;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .section p {
-  margin: 10px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .primary-btn, .secondary-btn {
@@ -105,8 +116,9 @@ body, html {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 15px 0;
+  margin: 10px 0;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .primary-btn:hover, .secondary-btn:hover {
@@ -133,59 +145,12 @@ body, html {
   padding: 10px;
   background-color: #e8f3ff;
   font-size: 14px;
-}
-
-/* Form Container Styles */
-.form-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 20px auto;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 14px;
-  color: #555;
-}
-
-.form-group input {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  position: relative; /* Changed from absolute to relative for better positioning */
+  bottom: 0;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-}
-
-.primary-btn, .secondary-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.secondary-btn {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.primary-btn:hover, .secondary-btn:hover {
-  background-color: #0056b3;
-}
-
-.note a {
-  color: #007bff;
+/* Ensure no overflow and prevent scrolling */
+body, html {
+  overflow: hidden; /* Prevent scrolling */
 }

@@ -8,7 +8,7 @@ body {
 /* Navbar Styles */
 .navbar {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
+  justify-content: space-between; /* Space out items */
   align-items: center; /* Vertically aligns navbar items */
   background-color: #add8e6; /* Light blue background */
   position: fixed; /* Keeps navbar fixed at the top */
@@ -18,7 +18,8 @@ body {
   height: 60px; /* Fixed height for the navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
   z-index: 999; /* Ensures navbar stays on top of other elements */
-  padding: 0;
+  padding: 0 20px; /* Added padding to the navbar */
+  box-sizing: border-box;
 }
 
 /* Navigation Links */
@@ -26,7 +27,6 @@ body {
   display: flex;
   justify-content: center; /* Evenly spaces the links */
   align-items: center;
-  width: 60%; /* Control the width of the navbar links */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -48,6 +48,28 @@ body {
   color: #0073e6; /* Brighter blue on hover */
 }
 
+/* Adjust the login button container */
+.login-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Ensure content below the navbar is visible */
 body > *:not(.navbar) {
   padding-top: 60px; /* Pushes content below the navbar */
@@ -59,6 +81,7 @@ body > *:not(.navbar) {
     height: auto; /* Adjusts height for smaller screens */
     flex-direction: column; /* Stacks links vertically */
     justify-content: center; /* Keeps the links centered */
+    padding: 10px 20px;
   }
 
   .navbar-links {

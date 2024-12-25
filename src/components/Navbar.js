@@ -9,11 +9,14 @@ const Navbar = () => {
         <h1>HOPE</h1>
       </div>
       <ul className="navbar-links">
-      <li><Link to="/home">Home</Link></li>
-      <li><Link to="/landingpage">Login</Link></li>
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/landingpage">Login</Link></li>
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/contact-us">Contact Us</Link></li>
       </ul>
+      <div className="login-btn-container">
+        <Link to="/login" className="login-btn">Login</Link>
+      </div>
     </nav>
   );
 };
