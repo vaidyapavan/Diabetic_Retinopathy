@@ -1,0 +1,87 @@
+.registration-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.registration-form {
+  background-color: #ffffff;
+  padding: 40px 50px; /* Increased padding for a bigger form */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly more shadow for better effect */
+  width: 600px; /* Increased width */
+  max-width: 90%; /* Responsive: ensures the form doesn't overflow on smaller screens */
+  box-sizing: border-box;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+  font-size: 24px; /* Bigger heading font */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px; /* Increased space between label and input */
+  font-size: 16px; /* Larger label font size */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px; /* Increased padding inside inputs */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly rounder corners */
+  font-size: 16px; /* Larger font size inside inputs */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; 
+}
+
+.register-button,
+.cancel-button {
+  padding: 12px 25px; 
+  border: none;
+  border-radius: 6px; 
+  cursor: pointer;
+  font-size: 18px; 
+}
+
+.register-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #218838;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+.message {
+  text-align: center;
+  color: green;
+  margin-top: 20px; 
+  font-size: 18px; 
+}

@@ -1,0 +1,17 @@
+.homepage-content {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .homepage-content h2 {
+    font-size: 36px;
+    color: #003366;
+  }
+  
+  .homepage-content p {
+    font-size: 18px;
+    color: #555555;
+    margin-top: 20px;
+  }
+  

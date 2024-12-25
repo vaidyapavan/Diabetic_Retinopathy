@@ -1,0 +1,87 @@
+.upload-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full-page height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    border: 3px dashed #007bff;
+    width: 500px; /* Increased width */
+    height: 400px; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* More space below */
+    background-color: #ffffff; /* White background inside the border */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for emphasis */
+  }
+  
+  .placeholder-text {
+    color: #6c757d;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .displayed-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits without distortion */
+  }
+  
+  .options-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .option-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .option-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .browse-button {
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .browse-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .upload-button {
+    padding: 12px 25px; /* Larger button */
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font */
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .upload-button:hover {
+    background-color: #218838;
+  }
+  

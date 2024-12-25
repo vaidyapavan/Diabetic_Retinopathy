@@ -1,0 +1,73 @@
+/* Reset body margins and paddings to ensure clean layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Vertically aligns navbar items */
+  background-color: #add8e6; /* Light blue background */
+  position: fixed; /* Keeps navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 60px; /* Fixed height for the navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  z-index: 999; /* Ensures navbar stays on top of other elements */
+  padding: 0;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  justify-content: center; /* Evenly spaces the links */
+  align-items: center;
+  width: 60%; /* Control the width of the navbar links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.navbar-links li {
+  display: inline; /* Keeps links in a row */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #003399; /* Solid blue for links */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0073e6; /* Brighter blue on hover */
+}
+
+/* Ensure content below the navbar is visible */
+body > *:not(.navbar) {
+  padding-top: 60px; /* Pushes content below the navbar */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Adjusts height for smaller screens */
+    flex-direction: column; /* Stacks links vertically */
+    justify-content: center; /* Keeps the links centered */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    width: 100%; /* Ensure the links take full width */
+    gap: 20px; /* Adjust spacing for small screens */
+  }
+
+  .navbar-links li {
+    text-align: center; /* Center each link in the column layout */
+  }
+}
