@@ -1,0 +1,47 @@
+.vitals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem; /* Reduced gap for closer alignment */
+  }
+  
+  .vital-card {
+    background: var(--white);
+    padding: 1.5rem; /* Reduced padding */
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .vital-card:hover {
+    transform: translateY(-3px); /* Slight hover effect */
+  }
+  
+  .vital-card h4 {
+    margin-top: 0.25rem; /* Reduced margin */
+    font-size: 1.5rem; /* Reduced font size */
+    font-weight: bold;
+    color: var(--pink);
+  }
+  
+  .vital-card p {
+    font-size: 1rem; /* Smaller font for labels */
+  }
+  
+  .vital-card .severity {
+    font-size: 0.9rem; /* Smaller font for severity text */
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  /* Severity Text Color Based on Class */
+  .vital-card.normal .severity {
+    color: #66bb6a; /* Green color for normal readings */
+  }
+  
+  .vital-card.low .severity,
+  .vital-card.high .severity {
+    color: #ff7043; /* Red color for low or high (severe) readings */
+  }
+  

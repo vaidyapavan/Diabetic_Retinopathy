@@ -11,6 +11,9 @@ import RegistrationForm from './components/RegistrationForm';
 import AlreadyDoctor from './components/AlreadyDoctor';
 import AlreadyPatient from './components/AlreadyPatient';
 import MainDashApp from './components/MainDashApp';
+import MainDash from './components/PatientDashboard/Maindash';
+import CheckDiabetes from './components/CheckDiabetes';
+
 
 const App = () => {
   return(
@@ -22,12 +25,15 @@ const App = () => {
         <Route path="/doctor-data" element={<DoctorRegistration />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path='/yy' element={<UploadPage/>}/>
+        <Route path='/UploadPage' element={<UploadPage/>}/>
+        <Route path='/login'element={<LandingPage/>}/>
         <Route path="/landingpage" element={<LandingPage/>} />
         <Route path='/registrationform' element={<RegistrationForm/>}/>
         <Route path='/alreadydoctor' element={<AlreadyDoctor/>}/>
         <Route path='/alreadypatient' element={<AlreadyPatient/>}/>
         <Route path="/dashboard" element={<MainDashApp />} />
+        <Route path='/patientdashboard' element={<MainDash/>}/>
+        <Route path="/check-diabetes" component={CheckDiabetes} />
 
       </Routes>
     </div>

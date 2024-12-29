@@ -1,0 +1,84 @@
+.patient-history {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+  }
+  
+  .patient-history h3 {
+    margin-bottom: 1rem;
+    color: var(--pink);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 0.75rem;
+  }
+  
+  th {
+    background: var(--light-pink);
+    color: var(--text-color);
+  }
+  
+  tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  td {
+    color: var(--text-color);
+  }
+  
+  /* Severity Colors */
+  .severity {
+    font-weight: bold;
+  }
+  
+  .severity.high {
+    color: #ff7043; /* Red for high severity */
+  }
+  
+  .severity.low {
+    color: #66bb6a; /* Green for low severity */
+  }
+  
+  /* Status Colors */
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.under-treatment {
+    color: #ff7043; /* Red for under treatment */
+  }
+  
+  .status.cured {
+    color: #66bb6a; /* Green for cured */
+  }
+  
+  .status.monitoring {
+    color: #ffb74d; /* Orange for monitoring */
+  }
+  
+  /* Documents Styling */
+  .documents a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .documents a:hover {
+    color: var(--pink);
+  }
+  
+  .documents a svg {
+    margin-right: 8px; /* Space between the icon and text */
+  }
+  

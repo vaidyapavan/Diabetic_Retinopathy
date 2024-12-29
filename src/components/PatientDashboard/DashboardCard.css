@@ -1,0 +1,132 @@
+/* Overall Card Layout */
+.dashboard-card {
+    width: 100%; /* Make the card span full width */
+    max-width: 1300px; /* Increased width for a wider layout */
+    margin: 30px auto;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    padding: 25px;
+    gap: 20px; /* Reduced gap between the sections */
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Profile Section (Left Side) */
+  /* Profile Section (Left Side) */
+.profile-section {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-right: 2px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+  
+  .profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .profile-email {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    width: 120px; /* Adjust the size as needed */
+    height: 120px; /* Ensure the width and height are the same for a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    overflow: hidden; /* Ensure image does not overflow */
+    border: 3px solid #e0e0e0; /* Optional: Add a border around the circle */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits well within the circular frame */
+  }
+  
+  /* Rest of the styles remain the same */
+  
+  
+  .edit-profile-btn {
+    background: #4b77a9;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background: #3b5998;
+  }
+  
+  /* Details Section (Right Side) */
+  .details-section {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced spacing between each detail */
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  /* Individual Detail Item */
+  .detail {
+    display: flex;
+    flex-direction: column; /* Stack label and value vertically */
+    align-items: flex-start; /* Align to the start of the column */
+    min-width: 150px; /* Ensure consistent width for each detail */
+    padding: 5px 10px; /* Reduced padding */
+    background: #fff;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px; /* Added base font size for the detail row */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+  }
+  
+  /* Hover effect for each detail */
+  .detail:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  /* Labels */
+  .detail-label {
+    font-weight: bold;
+    color: #555;
+    font-size: 12px; /* Decrease label font size */
+    margin-bottom: 5px; /* Space between label and value */
+  }
+  
+  /* Values */
+  .detail-value {
+    color: #777;
+    font-size: 12px!important; /* Increased value font size for better balance */
+  }
+  
+  /* Color code for different severity levels */
+  .high {
+    color: red;
+  }
+  
+  .moderate {
+    color: orange;
+  }
+  
+  .low {
+    color: green;
+  }
+  

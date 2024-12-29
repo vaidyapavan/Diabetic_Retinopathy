@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between title and profile section */
+    align-items: center;
+    padding: 1rem 2rem; /* Adding spacing for better layout */
+    background: var(--glass);
+    border-radius: 1rem;
+    box-shadow: var(--boxShadow);
+    margin: 1rem;
+  }
+  
+  .headerTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column; /* Stack image and details vertically */
+    align-items: center; /* Align profile image and details horizontally */
+    gap: 0.5rem; /* Space between the image and details */
+  }
+  
+  .profileImage {
+    width: 60px; /* Adjust the size for a professional look */
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--pink);
+  }
+  
+  .profileDetails {
+    display: flex;
+    flex-direction: column; /* Ensure the name and email are stacked vertically */
+    gap: 0.25rem; /* Spacing between name and email */
+    text-align: center; /* Center align text */
+  }
+  
+  .profileDetails p {
+    margin: 0;
+    font-size: 1rem; /* Font size for better visibility */
+  }
+  
+  .profileDetails p:first-child {
+    font-weight: bold; /* Make the name bold */
+  }
+  
+  .profileDetails p:last-child {
+    color: var(--gray); /* Color for email */
+  }
+  

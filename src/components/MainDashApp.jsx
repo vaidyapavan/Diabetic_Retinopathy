@@ -1,8 +1,7 @@
 import './MainDashApp.css'
 import MainDash from './MainDash/MainDash';
-import RightSide from './Rightside/Rightside';
 import Sidebar from './Sidebar';
-
+import RightSide from './RightSide/RightSide';
 
 function MainDashApp() {
   return (

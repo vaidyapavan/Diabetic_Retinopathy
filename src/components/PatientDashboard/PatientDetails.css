@@ -1,0 +1,20 @@
+.patient-details {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+  }
+  
+  .patient-details h3 {
+    margin: 0 0 1rem 0;
+    color: var(--pink);
+  }
+  
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+  }
+  
