@@ -1,156 +1,87 @@
-/* Global Styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100%;
-}
-
-/* Container Styles */
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Ensure full screen height */
-  max-width: 100%;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #e8f3ff;
-  display: flex;
-  justify-content: space-between; /* Aligns logo on left and button on right */
-  align-items: center;
-  padding: 10px 20px; /* Adjusted padding for better spacing */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1; /* Make navigation items take available space */
-  justify-content: center; /* Centers the navigation links */
-}
-
-.nav-links li {
-  margin: 0 15px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-}
-
-.nav-links li:hover {
-  text-decoration: underline;
-  color: #007bff;
-}
-
-.login-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
-  margin-left: 25px;
-  font-size: 16px;
-}
-
-.login-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Content Styles */
-.content {
-  display: flex;
-  justify-content: space-around; /* Space sections side by side */
-  align-items: center;
-  flex: 1;
-  margin: 0;
-  padding: 0;
-  height: calc(100vh - 80px); /* Adjusted height to fill remaining space */
-}
-
-/* Section Styles */
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 45%; /* Each section will take 45% of available space */
-  max-width: 500px; /* Max width to prevent stretching */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hospital {
-  background-color: #e8f3ff;
-}
-
-.patient {
-  background-color: #f7f7f7;
-}
-
-.section h2 {
-  color: #007bff;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.section p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.primary-btn, .secondary-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.primary-btn:hover, .secondary-btn:hover {
-  background-color: #0056b3;
-}
-
-.note {
-  font-size: 14px;
-  color: #555;
-}
-
-.note a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.note a:hover {
-  text-decoration: underline;
-}
-
-/* Footer Styles */
-.footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #e8f3ff;
-  font-size: 14px;
-  width: 100%;
-  position: relative; /* Changed from absolute to relative for better positioning */
-  bottom: 0;
-}
-
-/* Ensure no overflow and prevent scrolling */
-body, html {
-  overflow: hidden; /* Prevent scrolling */
-}
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #673ab7;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffeb3b;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeb3b;
+  }
+  
+  /* Homepage content styles */
+  .homepage-content {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .homepage-content h2 {
+    font-size: 2.5rem;
+    color: #673ab7;
+    margin-bottom: 20px;
+  }
+  
+  .homepage-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+  
+  .footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+  }
+  

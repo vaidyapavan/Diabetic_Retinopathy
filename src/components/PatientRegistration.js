@@ -12,7 +12,9 @@ const PatientRegistration = () => {
   });
 
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -21,10 +23,11 @@ const PatientRegistration = () => {
     }));
   };
 
-  const handleRegister = (e) => {
+  // Handle form submission
+  const handleRegister = async (e) => {
     e.preventDefault();
 
-    // Simple validation
+    // Validation
     if (
       !formData.name ||
       !formData.age ||
@@ -36,17 +39,45 @@ const PatientRegistration = () => {
       return;
     }
 
-    setMessage("Successfully registered!");
-    setFormData({
-      name: "",
-      age: "",
-      bloodGroup: "",
-      address: "",
-      phone: "",
-      isGenetic: "No",
-    });
+    setIsLoading(true);
+    setMessage(""); // Clear previous messages
+
+    try {
+      const response = await fetch("http://localhost:5000/register-patient", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if response status is not 2xx
+      if (!response.ok) {
+        const errorData = await response.json();
+        setMessage(errorData.message || "Error registering patient.");
+      } else {
+        const data = await response.json();
+        setMessage(`Successfully registered! Patient ID: ${data.patientID}`);
+
+        // Clear the form
+        setFormData({
+          name: "",
+          age: "",
+          bloodGroup: "",
+          address: "",
+          phone: "",
+          isGenetic: "No",
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("An error occurred while registering the patient.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
+  // Handle cancel action
   const handleCancel = () => {
     setFormData({
       name: "",
@@ -56,7 +87,7 @@ const PatientRegistration = () => {
       phone: "",
       isGenetic: "No",
     });
-    setMessage("");
+    setMessage(""); // Clear the message
   };
 
   return (
@@ -137,13 +168,14 @@ const PatientRegistration = () => {
         </div>
         {message && <p className="message">{message}</p>}
         <div className="form-buttons">
-          <button type="submit" className="register-button">
-            Register
+          <button type="submit" className="register-button" disabled={isLoading} style={{marginLeft:"90px"}}>
+            {isLoading ? "Registering..." : "Register"}
           </button>
           <button
             type="button"
             className="cancel-button"
             onClick={handleCancel}
+             style={{marginRight:"90px"}}
           >
             Cancel
           </button>

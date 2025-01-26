@@ -1,0 +1,54 @@
+/* Container for the slider */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Style for the slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom navigation buttons container */
+.custom-navs {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+/* Style for the previous arrow button */
+.prev-arrow, .next-arrow {
+    background-color: #007bff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for navigation buttons */
+.prev-arrow:hover, .next-arrow:hover {
+    background-color: #0056b3;
+}
+
+/* Icon styles inside the buttons */
+.prev-arrow svg, .next-arrow svg {
+    color: white;
+}

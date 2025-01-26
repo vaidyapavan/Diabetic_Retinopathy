@@ -1,17 +1,132 @@
-.homepage-content {
-    text-align: center;
-    margin: 50px auto;
-    padding: 20px;
+/* General Page Styling */
+.homepage {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+  overflow-y: auto; /* Allows the entire page to be scrollable */
+  height: 100vh; /* Viewport height */
+}
+
+html, body {
+  height: 100%; /* Ensures body and html fill the viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+/* First Section - Banner */
+.banner-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6b6b, #ffcc33);
+  padding: 50px;
+  color: white;
+  text-align: center;
+  overflow-y: auto; /* Makes the banner scrollable if necessary */
+}
+
+.banner-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.banner-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+/* Cards Section */
+.cards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 50px;
+  max-height: 600px; /* Sets a maximum height to make this section scrollable */
+  overflow-y: auto; /* Enables vertical scrolling within the cards section */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #ff6b6b;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.card p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.card-image {
+  width: 70%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto; /* Footer can scroll if content overflows */
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.social-icons i {
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: 1fr;
   }
-  
-  .homepage-content h2 {
-    font-size: 36px;
-    color: #003366;
+
+  .banner-content h1 {
+    font-size: 2.5em;
   }
-  
-  .homepage-content p {
-    font-size: 18px;
-    color: #555555;
-    margin-top: 20px;
-  }
-  
+}

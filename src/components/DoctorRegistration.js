@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './DoctorRegistration.css';
+import axios from 'axios';
 
 const DoctorRegistration = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ const DoctorRegistration = () => {
     }));
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     // Simple validation
@@ -35,14 +36,21 @@ const DoctorRegistration = () => {
       return;
     }
 
-    setMessage('Doctor successfully registered!');
-    setFormData({
-      name: '',
-      email: '',
-      phoneNo: '',
-      specialty: '',
-      availableTime: '',
-    });
+    try {
+      const response = await axios.post('http://localhost:3000/register-doctor', formData);
+      setMessage(response.data.message);
+      // Clear form after successful registration
+      setFormData({
+        name: '',
+        email: '',
+        phoneNo: '',
+        specialty: '',
+        availableTime: '',
+      });
+    } catch (error) {
+      console.error('Error registering doctor:', error);
+      setMessage('Error registering doctor.');
+    }
   };
 
   const handleCancel = () => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './RegistrationForm.css'; // Add styling for the form
+import axios from 'axios'; // Import axios for making HTTP requests
 
 const RegistrationForm = () => {
   const [hospitalDetails, setHospitalDetails] = useState({
@@ -10,6 +11,9 @@ const RegistrationForm = () => {
     confirm_password: ''
   });
 
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setHospitalDetails({
@@ -18,19 +22,29 @@ const RegistrationForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form validation and API call logic here
-    if (hospitalDetails.password === hospitalDetails.confirm_password) {
-      alert('Hospital Registered Successfully!');
-    } else {
+    if (hospitalDetails.password !== hospitalDetails.confirm_password) {
       alert('Passwords do not match!');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/register-hospital', hospitalDetails);
+      if (response.data.success) {
+        setSuccess('Hospital Registered Successfully!');
+        setError('');
+      } else {
+        setError(response.data.message);
+      }
+    } catch (err) {
+      setError('Error registering hospital. Please try again.');
     }
   };
 
   return (
     <div className="form-container">
-      <h3>Hospital Registration</h3>
+      <h3  style={{ textAlign: "center" }}>Hospital Registration</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Hospital Name:</label>
@@ -93,10 +107,12 @@ const RegistrationForm = () => {
           />
         </div>
         <div className="form-actions">
-          <button type="submit" className="register-btn">Register</button>
-          <button type="button" className="cancel-btn" onClick={() => window.history.back()}>Cancel</button>
+          <button type="submit" className="register-btn" style={{marginLeft:"60px"}}>Register</button>
+          <button type="button" className="cancel-btn" onClick={() => window.history.back()} style={{marginRight:"90px"}}>Cancel</button>
         </div>
       </form>
+      {error && <p className="error">{error}</p>}
+      {success && <p className="success">{success}</p>}
     </div>
   );
 };
