@@ -140,6 +140,7 @@ a {
   background-color: #7bbfd9;
   padding: 2rem 1rem;
   height: 60vh;
+  width: 100%;
 }
 
 .hero-content {
@@ -155,7 +156,7 @@ a {
 }
 
 .hero-title {
-  color: white;
+  /* color: white; */
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
@@ -513,8 +514,10 @@ a {
   background-color:wheat;
   color: white;
   padding: 2.5rem 1rem;
-  height: 60vh;
+  height: 40vh;
   display: flex;
+  height: fit-content;
+  
 }
 
 .footer-grid {
@@ -608,7 +611,9 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: -15rem;
+  margin-bottom: 2rem;
+
 }
 
 .social-icon-link {

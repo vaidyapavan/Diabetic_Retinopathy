@@ -305,11 +305,7 @@ const HomePage = () => {
             <div className="footer-column">
               <h4 className="footer-heading">Useful Links</h4>
               <ul className="footer-links">
-                <li>
-                  <a href="#" className="footer-link">
-                    Home
-                  </a>
-                </li>
+
                 <li>
                   <a href="#" className="footer-link">
                     Treatment of DR
@@ -320,16 +316,8 @@ const HomePage = () => {
                     Clinical Trial
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    Doctors
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    About Us
-                  </a>
-                </li>
+
+
                 <li>
                   <a href="#" className="footer-link">
                     Blog
@@ -340,11 +328,11 @@ const HomePage = () => {
                     Contact
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#" className="footer-link">
                     Medical Videos
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 

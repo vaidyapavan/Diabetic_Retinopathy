@@ -1,14 +1,15 @@
-.header {
+/* .header {
     display: flex;
-    justify-content: space-between; /* Space between title and profile section */
+    justify-content: space-between; 
     align-items: center;
-    padding: 1rem 2rem; /* Adding spacing for better layout */
+    padding: 1rem 2rem; 
     background: var(--glass);
     border-radius: 1rem;
     box-shadow: var(--boxShadow);
     margin: 1rem;
   }
-  
+   */
+   
   .headerTitle {
     font-size: 1.5rem;
     font-weight: bold;
