@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './ContactUs.css';
+import styles from './ContactUs.module.css';  // Importing the CSS Module
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -88,55 +89,56 @@ const ContactUs = () => {
 
   return (
     <> 
-    <div className="contact-us-container">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you! Please fill out the form below.</p>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Your Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={errors.name ? 'input-error' : ''}
-          />
-          {errors.name && <span className="error-message">{errors.name}</span>}
-        </div>
+      <div className={styles.contactUsContainer}>
+        <Navbar></Navbar>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Please fill out the form below.</p>
+        <form onSubmit={handleSubmit} className={styles.contactForm}>
+          <div className={styles.formGroup}>
+            <label htmlFor="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={errors.name ? styles.inputError : ''}
+            />
+            {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Your Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={errors.email ? 'input-error' : ''}
-          />
-          {errors.email && <span className="error-message">{errors.email}</span>}
-        </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={errors.email ? styles.inputError : ''}
+            />
+            {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className={errors.message ? 'input-error' : ''}
-          ></textarea>
-          {errors.message && <span className="error-message">{errors.message}</span>}
-        </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className={errors.message ? styles.inputError : ''}
+            ></textarea>
+            {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
+          </div>
 
-        <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className={styles.submitBtn}>Submit</button>
 
-        {/* Display server response */}
-        {serverResponse && <p className="server-response">{serverResponse}</p>}
-      </form>
-     <Footer></Footer>
-    </div>
+          {/* Display server response */}
+          {serverResponse && <p className={styles.serverResponse}>{serverResponse}</p>}
+        </form>
+      
+      </div>
     
     </>
     

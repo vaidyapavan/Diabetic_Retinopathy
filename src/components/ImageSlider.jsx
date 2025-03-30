@@ -23,8 +23,8 @@ function ImageSlider() {
         <div className="slider-container">
             <SimpleImageSlider 
                 className="slider"
-                width={500}  // Reduced width for better fit
-                height={250}  // Reduced height
+                width={900}  // Reduced width for better fit
+                height={450}  // Reduced height
                 images={images}
                 showNavs={true}
                 autoPlay={true}

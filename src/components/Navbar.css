@@ -8,17 +8,17 @@ body {
 /* Navbar Styles */
 .navbar {
   display: flex;
-<<<<<<< Updated upstream
+
   justify-content: space-between; /* Space out items */
   align-items: center; /* Vertically aligns navbar items */
-  background: linear-gradient(90deg, #FFF0E1, #FBE6F3, #FFEAE8); /* Gradient background */
+  background-color: F96E2A;
   position: fixed; /* Keeps navbar fixed at the top */
-=======
+
   justify-content: space-between; 
   align-items: center; 
   background-color:dimgrey; 
   position: fixed; 
->>>>>>> Stashed changes
+
   top: 0;
   left: 0;
   width: 100%;
@@ -46,20 +46,20 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-<<<<<<< Updated upstream
+
   color: purple; /* Solid blue for links */
-=======
->>>>>>> Stashed changes
+
+
   font-size: 20px;
   transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-<<<<<<< Updated upstream
+
   color: peachpuff; /* Brighter blue on hover */
-=======
+
   color: #0073e6; 
->>>>>>> Stashed changes
+
 }
 
 /* Adjust the login button container */
@@ -71,7 +71,7 @@ body {
 
 .login-btn {
   background-color: #d8b4e2; /* Light purple */
-  color: #fff; /* White text */
+  color: #fff; 
   border: none;
   border-radius: 5px;
   padding: 8px 15px;

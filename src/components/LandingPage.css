@@ -14,7 +14,7 @@ body {
   
   /* Navbar styles */
   .navbar {
-    background-color: #673ab7;
+    background-color:rgb(255, 102, 0);
     padding: 10px 20px;
     display: flex;
     align-items: center;

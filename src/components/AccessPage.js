@@ -60,9 +60,9 @@ const AccessPage = () => {
             Don't have an account? <a href="#" onClick={handlePatientSignup}>Sign up here</a>
           </p>
         </div>
+ 
       </main>
-      <Footer></Footer>
-    </div>
+         </div>
   );
 };
 

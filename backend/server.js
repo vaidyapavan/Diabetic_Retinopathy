@@ -12,15 +12,26 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://vaidyapavan1000:vaidyapavan1000@cluster0.ppxhn.mongodb.net/user')
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('MongoDB connection error:', err));
+// MongoDB connection
+mongoose.connect('mongodb://localhost:27017/user', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true, // Ensure you're using the unified topology for MongoDB
+});
+
+mongoose.connection.on("error", () => {
+  console.log("Error in connection");
+});
+
+mongoose.connection.once('open', () => {
+  console.log("Connected to MongoDB");
+});
+
 
 // Hospital Schema for 'Hospital_Credentials' collection
 const hospitalSchema = new mongoose.Schema({
   name: String,
   address: String,
-  hospital_id: String,
+  hospital_id: { type: String, unique: true },
   password: String,
 }, { collection: 'Hospital_Credentials' });
 
@@ -63,12 +74,6 @@ app.post('/register-hospital', async (req, res) => {
     res.status(500).json({ success: false, message: 'Error saving hospital to database' });
   }
 });
-
-
-// MongoDB connection
-mongoose.connect('mongodb+srv://vaidyapavan1000:vaidyapavan1000@cluster0.ppxhn.mongodb.net/user')
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('MongoDB connection error:', err));
 
 // Patient Schema for 'patient_credentials' collection
 const patientSchema = new mongoose.Schema({
@@ -116,38 +121,33 @@ app.post('/register-patient', async (req, res) => {
   }
 });
 
-
-
-
+// Hospital Login Route
 app.post('/login-hospital', async (req, res) => {
-    const { hospital_id, password } = req.body;
-  
-    // Simple validation for required fields
-    if (!hospital_id || !password) {
-      return res.status(400).json({ success: false, message: 'Please provide both Hospital ID and password.' });
+  const { hospital_id, password } = req.body;
+
+  // Simple validation for required fields
+  if (!hospital_id || !password) {
+    return res.status(400).json({ success: false, message: 'Please provide both Hospital ID and password.' });
+  }
+
+  try {
+    // Check if the hospital credentials exist in the database
+    const hospital = await Hospital.findOne({ hospital_id, password });
+
+    if (!hospital) {
+      return res.status(401).json({ success: false, message: 'Invalid credentials' });
     }
-  
-    try {
-      // Check if the hospital credentials exist in the database
-      const hospital = await Hospital.findOne({ hospital_id, password });
-  
-      if (!hospital) {
-        return res.status(401).json({ success: false, message: 'Invalid credentials' });
-      }
-  
-      // If hospital credentials are valid, respond with success
-      res.status(200).json({ success: true, message: 'Login successful' });
-  
-    } catch (error) {
-      console.error('Error logging in hospital:', error);
-      res.status(500).json({ success: false, message: 'Error logging in hospital' });
-    }
-  });
 
+    // If hospital credentials are valid, respond with success
+    res.status(200).json({ success: true, message: 'Login successful' });
 
+  } catch (error) {
+    console.error('Error logging in hospital:', error);
+    res.status(500).json({ success: false, message: 'Error logging in hospital' });
+  }
+});
 
-
-  // Contact Query Schema for 'contact_queries' collection
+// Contact Query Schema for 'contact_queries' collection
 const contactQuerySchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },

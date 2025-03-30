@@ -32,7 +32,7 @@ const AlreadyDoctor = ({ onSignupClick }) => {
 
       if (response.data.success) {
         // On successful login, navigate to the landing page
-        navigate('/landingpage');
+        navigate('/uploadpage');
       } else {
         setMessage(response.data.message); // Show the error message if credentials are invalid
       }

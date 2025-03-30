@@ -46,7 +46,7 @@ const AlreadyPatient = () => {
 
       if (response.ok) {
         // Handle success
-        navigate('/landingpage'); // Navigate to the patient dashboard on success
+        navigate('/uploadpage'); // Navigate to the patient dashboard on success
       } else {
         // Display error from backend
         setErrorMessage(data.message);

@@ -1,12 +1,15 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom"; 
+import logo from "../images/hope.jpg";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h1>HOPE</h1>
+        {/* <h1>HOPE</h1> */}
+        <img src={logo} alt="Logo" style={{ width: '150px', height: '70px' }} />
+
       </div>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>

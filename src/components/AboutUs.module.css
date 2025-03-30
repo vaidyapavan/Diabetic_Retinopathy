@@ -1,0 +1,245 @@
+
+.aboutContainer {
+  font-family: 'Arial', sans-serif;
+  background-color:grey;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content from top */
+  overflow-y: auto; /* Enables scrolling if content overflows */
+  max-height: 100vh; /* Ensures the page content doesn't overflow */
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+
+
+/* Styling the Main Heading */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* About Content Section */
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color:#555;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.textSection {
+  max-width: 800px;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.textSection p {
+  margin-bottom: 20px;
+}
+
+/* Image Slider Section */
+.slider-container {
+  margin-top: 40px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+/* Federated Learning Section */
+.federatedLearningSection {
+  background-color:#555;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+}
+
+
+
+/* Styling for the Text Section */
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.sectionContent {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Optional: Add Icons to each section */
+.sectionTitle::before {
+  content: "🔒"; /* Example of a lock icon */
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #4CAF50; /* Green color for icons */
+}
+/* Styling for the Federated Learning Section */
+.federatedLearningSection {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.federatedLearningSection h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.federatedLearningSection h3 {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.featureCardsContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.featureCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px; /* Adjust card width */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+.featureIcon {
+  font-size: 2em; /* Icon size */
+  color: #4CAF50; /* Green color for icons */
+  margin-bottom: 15px;
+}
+
+.featureCard h4 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.featureCard p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .textSection {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .slider-container {
+    max-width: 100%;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  gap: 20px; /* Space between sections */
+  margin-bottom: 40px;
+}
+
+/* Each section styling */
+.section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sectionContent {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}

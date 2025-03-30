@@ -22,7 +22,7 @@
 .custom-navs {
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: 160%;
     display: flex;
     justify-content: space-between;
     align-items: center;

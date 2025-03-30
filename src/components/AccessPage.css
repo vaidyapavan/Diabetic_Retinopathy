@@ -1,157 +1,154 @@
-/* Global Styles */
-body, html {
+/* Base styles and reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
   width: 100%;
 }
 
-/* Container Styles */
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure full screen height */
+  min-height: 100vh;
   width: 100%;
+  width: 100vh;
 }
 
-/* Navbar Styles */
-.navbar {
-  background-color: #e8f3ff;
-  display: flex;
-  justify-content: space-between; /* Aligns logo on left and button on right */
-  align-items: center;
-  padding: 10px 20px; /* Adjusted padding for better spacing */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1; /* Make navigation items take available space */
-  justify-content: center; /* Centers the navigation links */
-}
-
-.nav-links li {
-  margin: 0 15px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-}
-
-.nav-links li:hover {
-  text-decoration: underline;
-  color: #007bff;
-}
-
-.login-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
-  margin-left: 25px;
-  font-size: 16px;
-}
-
-.login-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Content Styles */
+/* Main content section */
 .content {
-  display: flex;
-  justify-content: space-around; /* Space sections side by side */
-  align-items: center;
   flex: 1;
-  margin: 0;
-  padding: 0;
-  height: calc(100vh - 80px); /* Adjusted height to fill remaining space */
-}
-
-/* Section Styles */
-.section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section styling (hospital and patient) */
+.section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 130%;
+  max-width: 700px;
   text-align: center;
-  width: 45%; /* Each section will take 45% of available space */
-  max-width: 500px; /* Max width to prevent stretching */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 400px;
 }
 
+.section:hover {
+  transform: translateY(-5px);
+}
+
+/* Hospital section specific styling */
 .hospital {
-  background-color: #e8f3ff;
+  border-top: 4px solid #2c3e50;
 }
 
+/* Patient section specific styling */
 .patient {
-  background-color: #f7f7f7;
+  border-top: 4px solid #2c3e50;
 }
 
-.section h2 {
-  color: #007bff;
-  font-size: 22px;
-  margin-bottom: 15px;
+/* Typography */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
 }
 
-.section p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.primary-btn, .secondary-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.primary-btn:hover, .secondary-btn:hover {
-  background-color: #0056b3;
-}
-
-.note {
-  font-size: 14px;
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
   color: #555;
 }
 
-.note a {
-  color: #007bff;
-  text-decoration: none;
+.note {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #777;
 }
 
-.note a:hover {
+/* Button styling */
+button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 80%;
+  margin: 0.5rem 0;
+}
+
+.primary-btn {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #1a2530;
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+}
+
+.secondary-btn {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #2980b9;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Link styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
   text-decoration: underline;
 }
 
-/* Footer Styles */
-.footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #e8f3ff;
-  font-size: 14px;
-  width: 100%;
-  position: relative; /* Changed from absolute to relative for better positioning */
-  bottom: 0;
+/* Responsive design */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  
+  .section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
-/* Ensure no overflow and prevent scrolling */
-body, html {
-  overflow: hidden; /* Prevent scrolling */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
 }
