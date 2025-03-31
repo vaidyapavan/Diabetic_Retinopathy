@@ -1,10 +1,11 @@
 /* Main container styles */
 .container {
   font-family: Arial, sans-serif;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  background-color: #fff9f2;
+  height: fit-content;
+  border-radius: 20px;
+
 }
 
 /* Navbar styles */
@@ -53,9 +54,8 @@
 .content {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 50px 20px;
-  flex-grow: 1;
+
+
 }
 
 /* Section styles */

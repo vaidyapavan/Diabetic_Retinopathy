@@ -12,7 +12,7 @@ body {
   color: #333333;
   background-color: #ffffff;
   line-height: 1.5;
-  width: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -36,37 +36,41 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw; /* Full width of the viewport */
+  width: 100%;
+  overflow-x: hidden;
 }
-
 
 .container {
   width: 100%;
-  max-width: 1280px;
+ 
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 /* Header styles */
-/* .header {
-  background-color: #33ff99;
-  padding: 0.75rem 1rem;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 .header {
-  background-color:orange;
-  padding: 0.75rem 1rem;
+  width: 100%;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .navbar ul {
@@ -77,69 +81,25 @@ a {
 }
 
 .navbar li {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .navbar a {
   text-decoration: none;
-  color:orange;
-  font-weight: bold;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #000;
-}
-
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-image {
-  margin-right: 0.5rem;
-}
-
-.logo-text {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: white;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-link {
-  color: orange;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.login-button {
-  background-color: white;
-  color: #ff7033;
-  border-radius: 9999px;
-  padding: 0.375rem 1.5rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.login-button:hover {
-  background-color: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
 }
 
 /* Hero section styles */
 .hero-section {
   background-color: #7bbfd9;
-  padding: 2rem 1rem;
-  height: 60vh;
+  padding: 3rem 1rem;
   width: 100%;
 }
 
@@ -156,8 +116,7 @@ a {
 }
 
 .hero-title {
-  /* color: white; */
-  font-size: 2rem;
+    font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -178,6 +137,7 @@ a {
   width: 100%;
   height: auto;
   object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 .video-controls {
@@ -234,9 +194,10 @@ a {
 
 /* Services section styles */
 .services-section {
-  background-color: #8d8468;
-  padding: 2.5rem 1rem;
-  height: 50vh;
+  background-color:#cc8d4f;
+  padding: 3rem 1rem;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .services-grid {
@@ -268,6 +229,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .service-title {
@@ -288,17 +250,20 @@ a {
 .teleconsult-section {
   background-color: #7bbfd9;
   padding: 2.5rem 1rem;
-  height: 30vh;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .teleconsult-card {
-  background-color: white;
+  background-color: #7bbfd9;
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  
 }
 
 .teleconsult-content {
@@ -309,24 +274,26 @@ a {
 .teleconsult-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #374151;
+  color: white;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .book-call-button {
   background-color: white;
-  color: #ff7033;
-  border: 1px solid #ff7033;
+  color: #333;
+  border: none;
   border-radius: 9999px;
   padding: 0.375rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.2s ease;
+  margin-left: 45%;
 }
 
 .book-call-button:hover {
-  background-color: #fff5eb;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .teleconsult-image {
@@ -337,14 +304,18 @@ a {
 .doctor-image {
   border-radius: 0.5rem;
   width: 100%;
-  height: 300px;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
 }
+
 
 /* Statistics section styles */
 .stats-section {
-  background-color: #cccb99;
+  background-color: #be7225c0;
   padding: 2.5rem 1rem;
-  height: 30vh;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .stats-grid {
@@ -376,6 +347,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .stat-title {
@@ -388,10 +360,9 @@ a {
 .vision-mission-section {
   background-color: #7bbfd9;
   padding: 3rem 1rem;
-  /* background-image: url("/placeholder.svg?height=400&width=400"); */
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  width: 100%;
 }
 
 .vision-mission-grid {
@@ -401,7 +372,7 @@ a {
 }
 
 .circle-card {
-  background-color: rgba(123, 191, 217, 0.7);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   padding: 2rem;
   display: flex;
@@ -422,7 +393,6 @@ a {
 .circle-background {
   position: absolute;
   inset: 0;
-  /* background-image: url("/placeholder.svg?height=400&width=400"); */
   opacity: 0.2;
   background-position: center;
   background-repeat: no-repeat;
@@ -452,9 +422,9 @@ a {
 }
 
 .circle-icon img {
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
+  width: 200%;
+  height: 200%;
+
 }
 
 .circle-text {
@@ -467,9 +437,9 @@ a {
 
 /* Specialists section styles */
 .specialists-section {
-  background-color: #f5f5f5;
+  background-color: #e5f0f5;
   padding: 3rem 1rem;
-  height: 50vh;
+  width: 100%;
 }
 
 .specialists-title {
@@ -492,6 +462,7 @@ a {
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 .doctor-photo {
@@ -511,20 +482,17 @@ a {
 
 /* Footer styles */
 .footer {
-  background-color:wheat;
-  color: white;
+  background-color: #7bbed9a2;
+  color: #333;
   padding: 2.5rem 1rem;
-  height: 40vh;
-  display: flex;
-  height: fit-content;
-  
+  width: 100%;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  height: 50vh;
+  margin-bottom: 2rem;
 }
 
 .footer-column {
@@ -538,6 +506,8 @@ a {
 }
 
 .footer-logo-image {
+  width: 30px;
+  height: 30px;
   margin-right: 0.5rem;
 }
 
@@ -554,7 +524,7 @@ a {
 
 .footer-text {
   font-size: 0.875rem;
-  color: #d1d5db;
+  color: #333;
   margin-bottom: 1rem;
 }
 
@@ -566,7 +536,7 @@ a {
 }
 
 .footer-link {
-  color: white;
+  color: #333;
   font-size: 0.875rem;
   transition: all 0.2s ease;
 }
@@ -596,24 +566,22 @@ a {
 }
 
 .contact-icon.red {
-  background-color: #ef4444;
+  background-color: #ff7033;
 }
 
 .contact-icon.yellow {
-  background-color: #f59e0b;
+  background-color: #ff7033;
 }
 
 .contact-icon.blue {
-  background-color: #3b82f6;
+  background-color: #ff7033;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: -15rem;
-  margin-bottom: 2rem;
-
+  margin-top: 1rem;
 }
 
 .social-icon-link {
@@ -706,10 +674,12 @@ a {
   .vision-mission-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    border-radius: 20px;
   }
 
   .specialists-grid {
     grid-template-columns: repeat(4, 1fr);
+    border-radius: 20px;
   }
 
   .footer-grid {
@@ -729,86 +699,5 @@ a {
   .container {
     padding: 0 2rem;
   }
-}
-
-/* Additional styles to match the image */
-.hero-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.service-card {
-  padding: 2rem;
-}
-
-.service-text {
-  text-align: justify;
-}
-
-.teleconsult-section {
-  padding: 2rem 1rem;
-}
-
-.teleconsult-card {
-  background-color: #7bbfd9;
-  color: white;
-}
-
-.teleconsult-title {
-  color: white;
-}
-
-.book-call-button {
-  background-color: white;
-  color: #333;
-  border: none;
-}
-
-.stat-card {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat-icon {
-  margin-bottom: 1rem;
-}
-
-.stat-title {
-  text-align: center;
-}
-
-.circle-card {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.specialists-section {
-  background-color: #e5f0f5;
-}
-
-.doctor-card {
-  transition: transform 0.3s ease;
-}
-
-.doctor-card:hover {
-  transform: translateY(-5px);
-}
-
-.footer {
-  background-color: #d9e6f2;
-  color: #333;
-}
-
-.footer-link,
-.footer-text {
-  color: #333;
-}
-
-.contact-icon.red,
-.contact-icon.yellow,
-.contact-icon.blue {
-  background-color: #ff7033;
 }
 

@@ -9,13 +9,13 @@ import doctor_image from "../images/doctor.jpg"
 import first from "../images/11.jpg"
 import second from "../images/22.jpg"
 import third from "../images/33.jpg"
-import female from "../images/female.jpeg"
+import female1 from "../images/female1.jpeg"
 import vision from "../images/vision.jpg"
 import mision from "../images/mission.jpg"
 import doctor1 from "../images/doctor1.jpg"
-import doctor2 from "../images/doctor2.jpg"
-import doctor3 from "../images/doctor3.jpg"
-import doctor4 from "../images/doctor4.jpg"
+import doctor2 from "../images/doctor2.jpeg"
+import doctor3 from "../images/doctor3.jpeg"
+import doctor4 from "../images/doctor4.jpeg"
 import logo from "../images/logo.png"
 
 const HomePage = () => {
@@ -100,7 +100,7 @@ const HomePage = () => {
             {/* STOP Diabetes */}
             <div className="service-card">
               <div className="service-icon">
-                <img src={second} alt="Stop Diabetes Icon" width={64} height={64} />
+                <img src={third} alt="Stop Diabetes Icon" width={64} height={64} />
               </div>
               <h3 className="service-title">STOP Diabetes</h3>
               <p className="service-text">
@@ -113,7 +113,7 @@ const HomePage = () => {
             {/* At a glance */}
             <div className="service-card">
               <div className="service-icon">
-                <img src={third} alt="At a glance Icon" width={64} height={64} />
+                <img src={second} alt="At a glance Icon" width={64} height={64} />
               </div>
               <h3 className="service-title">At a glance</h3>
               <p className="service-text">
@@ -139,7 +139,7 @@ const HomePage = () => {
             </div>
             <div className="teleconsult-image">
               <img
-                src={female}
+                src={female1}
                 alt="Female Doctor"
                 width={200}
                 height={400}
