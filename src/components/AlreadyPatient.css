@@ -73,15 +73,12 @@ button {
 }
 
 .login-btn {
-  background-color: #27ae60 !important;
-  color: white;
+background-color: white !important;
+  color: black !important;
   margin-left: 80px;
 }
 
-.login-btn:hover {
-  background-color: #219653 !important;
-  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
-}
+
 
 .cancel-btn {
   background-color: #e74c3c !important;

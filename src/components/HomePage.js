@@ -1,5 +1,6 @@
 import { Play, Pause, Volume2, Maximize } from "lucide-react"
 import "../components/HomePage.css"
+import { useNavigate } from "react-router-dom"
 import React from "react"
 import { useState } from "react"
 import { useEffect } from "react"
@@ -19,6 +20,11 @@ import doctor4 from "../images/doctor4.jpeg"
 import logo from "../images/logo.png"
 
 const HomePage = () => {
+
+  const navigate = useNavigate()
+  const goToLogInPage = () => {
+    navigate("/accesspage")
+  }
   return (
     <div className="page-container">
       {/* Header Navigation */}
@@ -33,6 +39,8 @@ const HomePage = () => {
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
+                <button className="login-button" onClick={goToLogInPage}>Login</button>
+              
               </ul>
             </nav>
           </div>
